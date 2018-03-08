@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <!-- Button to open the modal login form -->
+    <button onclick="document.getElementById('id01').style.display='block'">Đăng nhập</button>
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <img src="image/logo.jpg" alt="Avatar" class="avatar">
+            </div>
+            <div class="container">
+                <label for="uname"><b>Tài khoản</b></label>
+                <input type="text" placeholder="Nhập tài khoản" name="uname" required>
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                <button type="submit">Đăng nhập</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Ghi nhớ đăng nhập
+                </label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy</button>
+                <span class="psw">Quên <a href="#">Mật khẩu?</a></span>
+            </div>
+        </form>
+    </div>
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng kí</button>
+    <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Đăng kí</h1>
+                <p>Nhập đầy đủ thông tin.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Nhập Email" name="email" required>
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Ghi nhớ đăng nhập
+                </label>
+                <p>Bằng cách tạo tài khoản bạn đồng ý <a href="#" style="color:dodgerblue">Điều khoản sử dụng</a>.</p>
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="header">
+        <h1>Social Network</h1>
+    </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 6</div>
+            <img src="image/busi.jpg" style="width:100%">
+            <div class="text">Business</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 6</div>
+            <img src="image/cul.jpg" style="width:100%">
+            <div class="text">Culture</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 6</div>
+            <img src="image/developer.jpg" style="width:100%">
+            <div class="text">Developer</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <img src="image/edu.jpg" style="width:100%">
+            <div class="text">Education</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <img src="image/soci.jpg" style="width:100%">
+            <div class="text">Society</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <img src="image/tech.jpg" style="width:100%">
+            <div class="text">Technology</div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <div class="footer">
+        <a href="#">Home</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    <script type="text/javascript" src="file.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+</html>
