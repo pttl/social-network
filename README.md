@@ -25,26 +25,24 @@ Cài Đặt (cho ubuntu)
 chạy các câu lệnh dưới đây và mở localhost:5000/
 
     $ git clone https://github.com/d0betga1/social-network.git
+    $ cd social-network
     $ virtualenv env
     $ source env/bin/activate
     $ pip install -r requirements.txt
-    $ python (dường dẫn file app.py)
+    $ python app.py
 
 
 Cài Đặt (cho window)
 -------------------
+- cài đặt python : [Python](https://www.python.org/)
+- cài đặt git : [Git](https://git-scm.com/) 
 
-chạy các câu lệnh dưới đây và mở localhost:5000/
+chạy các câu lệnh dưới đây trong **git bash** và mở localhost:5000/
 
-    - cài đặt git tại https://git-scm.com/
-    - mở git bash và viết câu lệnh
-    $ git clone https://github.com/d0betga1/social-network.git
-    - mở ananconda prompt và viết câu lệnh
     $ pip install virtualenv
-
-    - mở git bash và viết 
+    $ git clone https://github.com/d0betga1/social-network.git
+    $ cd (ổ đĩa):/Github/social-network
     $ virtutal env
     $ . env/Scripts/activate
-    $ cd (ổ đĩa):/Github/social-network
     $ pip install -r requirements.txt
-    $ python (dường dẫn file app.py)
+    $ python app.py
