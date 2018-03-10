@@ -27,7 +27,7 @@ chạy các câu lệnh dưới đây và mở localhost:5000/
     $ git clone https://github.com/d0betga1/social-network.git
     $ virtualenv env
     $ source env/bin/activate
-    (env) pip install -r requirements.txt
+    $ pip install -r requirements.txt
     $ python (dường dẫn file app.py)
 
 
