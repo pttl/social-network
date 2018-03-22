@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta charset="utf-8"></meta>
+	<link rel="stylesheet" href="signup.css"/>
+	<script src="signup.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-3"></div>
+		<div class="col-md-6 well" style="margin-top: 70px;">
+			<p style="font-size: 30px; font-family: sans-serif;"><strong>Sign up</strong></p>
+			<form class="form-inline">
+				<label for="firstname" style="margin-top: 20px;">First Name: </label>
+				<input type="text" name="firstname" class="form-control" placeholder="First Name..." style="width: 30%;" required>
+				<label style="margin-top: 20px; margin-left: 10px;" for="lastname">Last Name: </label>
+				<input type="text" name="lastname" class="form-control" placeholder="Last Name..." style="width: 30%;" required>
+			</form>
+			<form class="form-inline">
+				<label style="margin-top: 20px;" for="day">Day: </label>
+				<input type="" name="day" class="form-control" style="width: 45px;" placeholder="00">
+				<label style="margin-top: 20px; margin-left: 10px;" for="month">Month: </label>
+				<input type="" name="month" class="form-control" style="width: 45px;" placeholder="00">
+				<label style="margin-top: 20px; margin-left: 10px;" for="year">Year: </label>
+				<input type="" name="year" class="form-control" style="width: 60px;" placeholder="0000">
+			</form>
+			<form>
+				<label for="radio-inline" style="margin-top: 20px;">Sex: </label>
+    			<label class="radio-inline" style="margin-left: 10px;">
+      				<input type="radio" name="optradio" checked>Male
+    			</label>
+    			<label class="radio-inline">
+      				<input type="radio" name="optradio">Female
+    			</label>
+  			</form>
+			<form class="form-inline">
+				<label style="margin-top: 20px;" for="email">Email: </label>
+				<input type="text" name="email" class="form-control" placeholder="Email..." style="width: 90%;" required>
+				<label style="margin-top: 20px;" for="password">Password: </label>
+				<input type="password" name="password" class="form-control" placeholder="Password..." style="width: 70%">
+			</form>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 20px; width: 100%;">Create</button>
+			
+		</div>
+		
+		<div class="col-md-3"></div>
+	</div>
+
+</body>
+</html>
