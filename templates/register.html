@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+
+<body>
+    <form action="/register" method="POST">
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>Đăng Kí</h1>
+                </div>
+
+                <div class="login-form">
+                    <div class="control-group">
+                        <input type="text" class="login-field" value="" placeholder="Tên" name="username">
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
+
+                    <div class="control-group">
+                        <input type="password" class="login-field" value="" placeholder="Mật khẩu" name="password">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <input type="submit" value="Đăng Kí" class="btn ">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
