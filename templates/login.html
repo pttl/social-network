@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="/static/style.css" type="text/css">
+</head>
+
+<body>
+
+	{% block body %}
+	{% if session['logged_in'] %}
+	<p>You're logged in already!</p>
+	{% else %}
+ 
+	<form action="/login" method="POST">
+		<div class="login">
+			<div class="login-screen">
+				<div class="app-title">
+					<h1>Đăng Nhập</h1>
+					<!-- <h5>mặc định:admin+password</h5> -->
+				</div>
+
+				<div class="login-form">
+					<div class="control-group">
+						<input type="text" class="login-field" value="" placeholder="Tên" name="username">
+						<label class="login-field-icon fui-user" for="login-name"></label>
+					</div>
+
+					<div class="control-group">
+						<input type="password" class="login-field" value="" placeholder="Mật khẩu" name="password">
+						<label class="login-field-icon fui-lock" for="login-pass"></label>
+					</div>
+
+					<input type="submit" value="Đăng Nhập" class="btn ">
+					<br>
+					<div>
+						Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	{% endif %}
+	{% endblock %}
+</body>
+
+</html>
