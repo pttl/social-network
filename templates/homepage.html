@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style-homepage.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="col-md-8 nav navbar-nav navbar-right" style="margin-top: 5px;">
+                    <li style="float: right;"><a href='/logout'>Logout</a></li>
+                    <li style="float: right;"><a href="profile.html"><span class="glyphicon glyphicon-user"></span>My Account</a></li>
+                    <li class="active" style="float: right;"><a href="messages.html">Messages</a></li>
+                    <li class="active" style="float: right;"><a href="">Notifications</a></li>
+                    <li class="active" style="float: right;"><a href="">Gallery</a></li>
+                </ul> 
+                <a class="col-md-1 navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static',filename='img/logo.png') }}" width="60px" height="30px" ></a>
+                <div class="col-md-3 form-group input-group" style="width: 20%; margin-top: 13px;">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>    
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center" style="margin-top:100px;">
+        <div class="row">
+            <div class="col-md-3 well">
+                <div class="well">
+                    <p><a href="profile.html">My Profile</a></p>
+                    <img src="data:image/jpeg;base64,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" class="img-circle" height="65" width="65" alt="Avatar">
+                </div>
+                <div class="well">
+                    <p><a href="#">Interest</a></p>
+                    <p>
+                        <span class="label label-default">News</span>
+                        <span class="label label-primary">Footbal</span>
+                        <span class="label label-info">Gaming</span>
+                        <span class="label label-info">Books</span>
+                    </p>
+                </div>
+                <div class="well">
+                    <p><a href="#">Story</a></p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                	<div class="col-md-12">
+                		<div class="panel panel-default text-left">
+                			<div class="panel-body">
+                				<form  action="{{ url_for('handle_data') }}" method="POST">
+                					<div class="form-group">
+                						<label for="comment">Make post</label>
+                                        <input type="text" class="form-control" rows="3" name="post_area">
+                                        <button type="submit" class="btn btn-default"
+                						style="float:right;margin-top:10px;">Post</button>
+                					</div>
+                                </form>
+                            </div>
+                        </div>
+                        {% if post_data %}
+                            {% for p in post_data %}
+                                <div class="panel panel-default text-left">
+                                    <div class="panel-body">
+                                        <p>
+                                            {{ p['article'] }}
+                                        </p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                	</div>
+                </div>
+            </div>
+            <div class="col-md-2 well">
+            	<div class="thumbail">
+            		<p>Upcoming event</p>
+            		<img src="https://www.smartdatacollective.com/wp-content/uploads/2017/06/blockchain-explain-smartdata-collective-1024x614.jpg" alt="blockchain" width="150" height="100">
+            		<p><strong>Techlonogy</strong></p>
+            		<button class="btn btn-primary">Info</button>
+            	</div>
+            	<br>
+            	<div class="thumbail">
+            		<p>Upcoming event</p>
+            		<img src="https://i1.wp.com/paginaswebconcordia.com/wp-content/uploads/2016/12/mejores-resultados-en-tu-negocio.jpg?fit=1200%2C777" width="150" height="100">
+            		<p><strong>Business</strong></p>
+            		<button class="btn btn-primary">Info</button>
+            	</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
